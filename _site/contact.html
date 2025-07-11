@@ -34,7 +34,7 @@
     <a class="navbar-brand wow fadeInDownBig" href="index.html" style="padding: 15px; display: flex; align-items: center;">
       <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 200px; width: auto;">
     </a>
-    
+
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 15px;">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar" style="background-color: white;"></span>
@@ -63,6 +63,33 @@
 </nav>
 
 <!-- End Header -->
+
+<script>
+$(document).ready(function() {
+  // Get current page URL
+  var currentPath = window.location.pathname;
+  
+  // Remove active class from all nav items
+  $('.navbar-nav li').removeClass('active');
+  
+  // Add active class based on current path
+  if (currentPath === '/' || currentPath === '/index.html') {
+    $('.navbar-nav li:has(a[href="/"])').addClass('active');
+  } else if (currentPath.includes('/about')) {
+    $('.navbar-nav li:has(a[href="/about.html"])').addClass('active');
+  } else if (currentPath.includes('/services')) {
+    $('.navbar-nav li:has(a[href="/services.html"])').addClass('active');
+  } else if (currentPath.includes('/contact')) {
+    $('.navbar-nav li:has(a[href="/contact.html"])').addClass('active');
+  }
+  
+  // Handle clicks on navigation links
+  $('.navbar-nav a').click(function() {
+    $('.navbar-nav li').removeClass('active');
+    $(this).parent('li').addClass('active');
+  });
+});
+</script>
 
 <style>
 #navbar-section .navbar-nav > li > a:hover {
@@ -102,19 +129,20 @@ body {
 /* Adjust for mobile */
 @media (max-width: 768px) {
   body {
-    padding-top: 100px;
+    padding-top: 120px;
   }
   #navbar-section {
-    min-height: 100px !important;
+    min-height: 120px !important;
   }
   .navbar-header {
-    height: 100px !important;
+    height: 120px !important;
   }
   .navbar-brand img {
-    height: 140px !important;
+    height: 100px !important;
   }
   #carousel-section {
-    margin-top: -20px;
+    margin-top: 0;
+    padding-top: 20px;
   }
 }
 </style>
@@ -285,20 +313,13 @@ button:hover {
 <footer> 
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <h3><i class="fa fa-map-marker"></i> Contact:</h3>
-        <p class="footer-contact">
-          NW Florida Detailing <br>
-          Email: AP@nwfldetailing.com<br>
-        </p>
-      </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h3><i class="fa fa-external-link"></i> Links</h3>
         <p><a href="/about"> About ( Who we are )</a></p>
-        <p><a href="/services"> Services ( What we do )</a></p>
-        <p><a href="/contact"> Contact ( Feel free to contact )</a></p>
+        <p><a href="/services"> Services ( What we provide )</a></p>
+        <p><a href="/contact"> Schedule An Appointment</a></p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div style="text-align: center; margin-top: 30px;">
           <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing Logo" style="max-width: 100%; height: auto; margin-bottom: 15px;">
         </div>
@@ -307,7 +328,7 @@ button:hover {
   </div>
 
   <div class="copyright text center">
-    <p>&copy; Copyright 2025, <a href="https://www.nwfldetailing.com">NWFLDetailing.com</a></p>
+    <p>&copy; Copyright 2025, <a href="https://www.nwfldetailing.com">NWF PRO DETAILING SERVICES LLC</a></p>
   </div>
 </footer>
 

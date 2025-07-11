@@ -6,7 +6,7 @@
     <a class="navbar-brand wow fadeInDownBig" href="index.html" style="padding: 15px; display: flex; align-items: center;">
       <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 200px; width: auto;">
     </a>
-    
+
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 15px;">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar" style="background-color: white;"></span>
@@ -35,6 +35,33 @@
 </nav>
 
 <!-- End Header -->
+
+<script>
+$(document).ready(function() {
+  // Get current page URL
+  var currentPath = window.location.pathname;
+  
+  // Remove active class from all nav items
+  $('.navbar-nav li').removeClass('active');
+  
+  // Add active class based on current path
+  if (currentPath === '/' || currentPath === '/index.html') {
+    $('.navbar-nav li:has(a[href="/"])').addClass('active');
+  } else if (currentPath.includes('/about')) {
+    $('.navbar-nav li:has(a[href="/about.html"])').addClass('active');
+  } else if (currentPath.includes('/services')) {
+    $('.navbar-nav li:has(a[href="/services.html"])').addClass('active');
+  } else if (currentPath.includes('/contact')) {
+    $('.navbar-nav li:has(a[href="/contact.html"])').addClass('active');
+  }
+  
+  // Handle clicks on navigation links
+  $('.navbar-nav a').click(function() {
+    $('.navbar-nav li').removeClass('active');
+    $(this).parent('li').addClass('active');
+  });
+});
+</script>
 
 <style>
 #navbar-section .navbar-nav > li > a:hover {
@@ -74,19 +101,20 @@ body {
 /* Adjust for mobile */
 @media (max-width: 768px) {
   body {
-    padding-top: 100px;
+    padding-top: 120px;
   }
   #navbar-section {
-    min-height: 100px !important;
+    min-height: 120px !important;
   }
   .navbar-header {
-    height: 100px !important;
+    height: 120px !important;
   }
   .navbar-brand img {
-    height: 140px !important;
+    height: 100px !important;
   }
   #carousel-section {
-    margin-top: -20px;
+    margin-top: 0;
+    padding-top: 20px;
   }
 }
 </style>
