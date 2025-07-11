@@ -39,7 +39,6 @@ googleplus_link:
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
 
 # Exclude from processing.
 exclude:
@@ -51,3 +50,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - temp-theme/
+  - _site/
