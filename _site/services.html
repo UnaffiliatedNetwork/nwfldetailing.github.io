@@ -27,35 +27,35 @@
 </head>
 
   <!-- Header -->
-<nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
+<nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation" style="background-color: #2d3748; border-color: #2d3748; min-height: 120px;">
   <div class="container">
   
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+  <div class="navbar-header" style="height: 120px; display: flex; align-items: center;">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px;">
       <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+      <span class="icon-bar" style="background-color: white;"></span>
+      <span class="icon-bar" style="background-color: white;"></span>
+      <span class="icon-bar" style="background-color: white;"></span>
     </button>
 
-    <a class="navbar-brand wow fadeInDownBig" href="index.html" style="padding: 8px 15px; display: flex; align-items: center; flex-direction: column;">
-      <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 100px; width: 100px; margin-bottom: 8px;">
+    <a class="navbar-brand wow fadeInDownBig" href="index.html" style="padding: 15px; display: flex; align-items: center;">
+      <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 200px; width: auto;">
     </a>
   </div>
 
-  <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
+  <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse" style="margin-top: 20px;">
     <ul class="nav navbar-nav pull-right">
       <li class="active">
-        <a href="/">Home</a>
+        <a href="/" style="color: white; font-weight: 500;">Home</a>
       </li>
       <li>
-        <a href="/about.html">About</a>
+        <a href="/about.html" style="color: white; font-weight: 500;">About</a>
       </li>
       <li>
-        <a href="/services.html">Services</a>
+        <a href="/services.html" style="color: white; font-weight: 500;">Services</a>
       </li>
       <li>
-        <a href="/contact.html"><span>Contact</span></a>
+        <a href="/contact.html" style="color: white; font-weight: 500;"><span>Contact</span></a>
       </li>
     </ul>         
   </div>
@@ -63,6 +63,17 @@
 </nav>
 
 <!-- End Header -->
+
+<style>
+#navbar-section .navbar-nav > li > a:hover {
+  color: #4a90a4 !important;
+  background-color: transparent !important;
+}
+#navbar-section .navbar-nav > .active > a {
+  background-color: #4a90a4 !important;
+  color: white !important;
+}
+</style>
 
   <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
 <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
