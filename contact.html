@@ -1,0 +1,88 @@
+---
+layout: default_style
+permalink: /contact
+published: true
+---
+<!-- Main Container -->
+
+<div class="container-fluid-kamn">
+  <div class="row">
+    <div class="container">
+      <div class="col-lg-4">
+        <h4>Contact NW Florida Detailing:</h4>
+
+        <p class="block-author">{{ site.company_name }}</p>
+        <p>{{ site.address_line }}</p>
+        <p>Phone: {{ site.telephone_number }}</p>
+        {% if site.fax_number %}<p>Fax: {{ site.fax_number }}</p>{% endif %}
+
+        <em class="block-author">Email: {{ site.company_email }}</em> <br>
+        <br>
+        
+        <h4>Service Areas:</h4>
+        <p>We proudly serve the Northwest Florida region including:</p>
+        <ul>
+          <li>Pensacola</li>
+          <li>Destin</li>
+          <li>Fort Walton Beach</li>
+          <li>Crestview</li>
+          <li>Navarre</li>
+          <li>Gulf Breeze</li>
+          <li>Milton</li>
+        </ul>
+        
+        <h4>Mobile Service Available:</h4>
+        <p>We come to you! Mobile detailing services available throughout our service area.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="feedback-form">
+          <h4>Request a Quote or Schedule Service:</h4>
+          <p>Fill out the form below and we'll get back to you with pricing and availability. Please include details about your vehicle and the services you're interested in.</p>
+
+          <div id="contact-response"></div>
+          
+          <form id="contact-form">
+            <fieldset>
+              <div class="form-group form-group-fullname">
+                <label class="control-label" for="fullname">NAME *</label>
+                <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name">
+              </div>
+              <div class="form-group form-group-email">
+                <label class="control-label" for="email">E-MAIL *</label>
+                <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail">
+              </div>
+              <div class="form-group form-group-phone">
+                <label class="control-label" for="phone">PHONE NUMBER</label>
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Your Phone Number">
+              </div>
+              <div class="form-group form-group-vehicle">
+                <label class="control-label" for="vehicle">VEHICLE INFO</label>
+                <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Year, Make, Model (e.g., 2020 Honda Accord)">
+              </div>
+              <div class="form-group form-group-service">
+                <label class="control-label" for="service">SERVICE REQUESTED</label>
+                <select class="form-control" name="service" id="service">
+                  <option value="">Select a Service</option>
+                  <option value="basic">Basic Wash & Wax</option>
+                  <option value="full">Full Interior & Exterior</option>
+                  <option value="premium">Premium Detail</option>
+                  <option value="protection">Paint Protection/Ceramic Coating</option>
+                  <option value="correction">Paint Correction</option>
+                  <option value="other">Other (specify in message)</option>
+                </select>
+              </div>
+              <div class="form-group form-group-message">
+                <label class="control-label" for="message">MESSAGE *</label>
+                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Please provide any additional details about your vehicle's condition or specific services needed..."></textarea>
+              </div>           
+              <button type="button" class="btn btn-primary" onclick="alert('Thank you for your interest! Please call or email us directly to schedule your appointment.')">Submit Quote Request</button>
+            </fieldset>
+          </form>
+          
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>    
+    
+<!--End Main Container -->
