@@ -11,21 +11,22 @@
   <meta name="author" content="">
 
   <!-- Favicon and touch icons -->
-  <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../assets/css/animate.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/animate.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
   <!-- Header -->
 <nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
   <div class="container">
@@ -38,10 +39,13 @@
       <span class="icon-bar"></span>
     </button>
 
-    <a class="navbar-brand wow fadeInDownBig" href="index.html">
-      <span style="color: #2d5a27; font-weight: bold; font-size: 18px;">NWFLDetailing</span>
-      <br><small style="color: #2d5a27; font-size: 10px;">PRISTINE COASTAL SHINE</small>
-    </a>      
+    <a class="navbar-brand wow fadeInDownBig" href="index.html" style="padding: 8px 15px;">
+      <div style="line-height: 1.1;">
+        <span style="color: #2c5aa0; font-weight: 700; font-size: 28px; letter-spacing: 1px;">NW FLORIDA DETAILING</span>
+        <br>
+        <small style="color: #4a90a4; font-size: 11px; font-weight: 500; letter-spacing: 1.2px; margin-top: -2px; display: block;">PRISTINE COASTAL SHINE</small>
+      </div>
+    </a>
   </div>
 
   <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
@@ -56,9 +60,6 @@
         <a href="/services.html">Services</a>
       </li>
       <li>
-        <a href="/gallery.html">Gallery</a>
-      </li>
-      <li>
         <a href="/contact.html"><span>Contact</span></a>
       </li>
     </ul>         
@@ -68,72 +69,136 @@
 
 <!-- End Header -->
 
-  <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
-<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/wow.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/wow.min.js"></script>
 <script>
   new WOW().init();
 </script>
+
 
   <body>
     <!-- Begin #carousel-section -->
     <section id="carousel-section" class="section-global-wrapper"> 
         <div class="container-fluid-kamn">
             <div class="row">
-                <div id="carousel-1" class="carousel slide" data-ride="carousel">
+                <div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
 
                     <!-- Indicators -->
-                    <ol class="carousel-indicators visible-lg">
-                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-1" data-slide-to="1"></li>
-                        <li data-target="#carousel-1" data-slide-to="2"></li>
+                    <ol class="carousel-indicators">
+                        <li data-target="#hero-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#hero-carousel" data-slide-to="1"></li>
+                        <li data-target="#hero-carousel" data-slide-to="2"></li>
+                        <li data-target="#hero-carousel" data-slide-to="3"></li>
                     </ol>
         
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <!-- Begin Slide 1 -->
+                    <div class="carousel-inner">
+                        <!-- Slide 1: Working Slide -->
                         <div class="item active">
-                            <img src="../assets/img/slider/lamborghini-new.jpg" height="400" alt="Premium Car Detailing - Lamborghini">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">PREMIUM CAR DETAILING</h3>
-                                <p class="carousel-body">PROFESSIONAL \ PRISTINE \ COASTAL SHINE</p>
+                            <div style="height: 500px; background-image: url('/assets/img/slider/lamborghini-new.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                <div class="carousel-caption">
+                                    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">PREMIUM CAR DETAILING</h2>
+                                    <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">PROFESSIONAL • PRISTINE • COASTAL SHINE</p>
+                                </div>
                             </div>
                         </div>
-                        <!-- End Slide 1 -->
 
-                        <!-- Begin Slide 2 -->
+                        <!-- Slide 2: Porsche Exterior -->
                         <div class="item">
-                            <img src="../assets/img/slider/porsche-detail.jpg" height="400" alt="Luxury Sports Car Detailing - Porsche">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">LUXURY SPORTS CARS</h3>
-                                <p class="carousel-body">CERAMIC COATING \ PAINT PROTECTION \ EXCELLENCE</p>
+                            <div style="height: 500px; background-image: url('/assets/img/slider/porcsche-detail.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                <div class="carousel-caption">
+                                    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">LUXURY SPORTS CARS</h2>
+                                    <p style="color: rgb(255, 255, 255); text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">CERAMIC COATING • PAINT PROTECTION • EXCELLENCE</p>
+                                </div>
                             </div>
                         </div>
-                        <!-- End Slide 2 -->
 
-                        <!-- Begin Slide 3 -->
+                        <!-- Slide 3: Porsche Interior -->
                         <div class="item">
-                            <img src="../assets/img/slider/porsche-interior.jpg" height="400" alt="Interior Detailing - Porsche">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">INTERIOR PERFECTION</h3>
-                                <p class="carousel-body">LEATHER CARE \ STEAM CLEANING \ METICULOUS</p>
+                            <div style="height: 500px; background-image: url('/assets/img/slider/porsche-interior.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                <div class="carousel-caption">
+                                    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">INTERIOR PERFECTION</h2>
+                                    <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">LEATHER CARE • STEAM CLEANING • METICULOUS</p>
+                                </div>
                             </div>
                         </div>
-                        <!-- End Slide 3 -->
+
+                        <!-- Slide 4: Emerald Coast-->
+                        <div class="item">
+                            <div style="height: 500px; background-image: url('/assets/img/slider/emerald-coast.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                <div class="carousel-caption">
+                                    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">SERVING ALL OF NORTHWEST FLORIDA</h2>
+                                    <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">PRECISION • VALUE • GUARANTEED SATISFACTION</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
         
                     <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-1" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    <a class="left carousel-control" href="#hero-carousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" style="color: white; font-size: 30px;"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
-                    <a class="right carousel-control" href="#carousel-1" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    <a class="right carousel-control" href="#hero-carousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" style="color: white; font-size: 30px;"></span>
+                        <span class="sr-only">Next</span>
                     </a>
                 </div>
             </div>
         </div>
+
+        <style>
+        .carousel-caption {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 10;
+        }
+        .carousel-control {
+            background: none !important;
+            border: none !important;
+            color: white !important;
+        }
+        .carousel-indicators {
+            bottom: 20px;
+        }
+        .carousel-indicators li {
+            background-color: rgba(255,255,255,0.5);
+            border: 2px solid white;
+        }
+        .carousel-indicators .active {
+            background-color: white;
+        }
+        @media (max-width: 768px) {
+            .carousel-caption h2 {
+                font-size: 28px !important;
+            }
+            .carousel-caption p {
+                font-size: 16px !important;
+            }
+            .item > div {
+                height: 300px !important;
+            }
+        }
+        </style>
     </section>
     <!-- End #carousel-section -->
+
+    <script>
+    $(document).ready(function() {
+        // Initialize Bootstrap carousel
+        $('#hero-carousel').carousel({
+            interval: 5000,
+            ride: 'carousel'
+        });
+        
+        // Ensure carousel starts properly
+        $('#hero-carousel').carousel('cycle');
+    });
+    </script>
 
 
     <!-- Begin #services-section -->
@@ -222,18 +287,14 @@
         <h3><i class="fa fa-map-marker"></i> Contact:</h3>
         <p class="footer-contact">
           NW Florida Detailing <br>
-          Phone: Contact for Appointment <br>
-          Fax:  <br>
           Email: AP@nwfldetailing.com<br>
         </p>
       </div>
       <div class="col-md-4">
         <h3><i class="fa fa-external-link"></i> Links</h3>
         <p><a href="/about"> About ( Who we are )</a></p>
-        <p><a href="/about"> Services ( What we do )</a></p>
+        <p><a href="/services"> Services ( What we do )</a></p>
         <p><a href="/contact"> Contact ( Feel free to contact )</a></p>
-        <p><a href="/blog"> Blog ( Write to us )</a></p>
-        <p><a href="/team"> Team ( Meet the Team )</a></p> 
       </div>
       <div class="col-md-4">
         <h3><i class="fa fa-heart"></i> Socialize</h3>
@@ -251,7 +312,8 @@
   </div>
 
   <div class="copyright text center">
-    <p>&copy; Copyright 2025, <a href="#">Your Website Link</a>. <br>Theme ported by <a href="https://melvinchng.github.io/" target="_blank">Melvin Ch'ng</a></p>
+    <p>&copy; Copyright 2025, <a href="https://www.nwfldetailing.com">NWFLDetailing.com</a></p>
   </div>
 </footer>
+
 </html>
