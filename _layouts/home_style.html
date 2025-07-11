@@ -10,58 +10,97 @@
     <section id="carousel-section" class="section-global-wrapper"> 
         <div class="container-fluid-kamn">
             <div class="row">
-                <div id="carousel-1" class="carousel slide" data-ride="carousel">
+                <div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
 
                     <!-- Indicators -->
-                    <ol class="carousel-indicators visible-lg">
-                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-1" data-slide-to="1"></li>
-                        <li data-target="#carousel-1" data-slide-to="2"></li>
+                    <ol class="carousel-indicators">
+                        <li data-target="#hero-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#hero-carousel" data-slide-to="1"></li>
+                        <li data-target="#hero-carousel" data-slide-to="2"></li>
                     </ol>
         
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <!-- Begin Slide 1 -->
+                    <div class="carousel-inner">
+                        <!-- Slide 1: Lamborghini -->
                         <div class="item active">
-                            <img src="/assets/img/slider/lamborghini-detail.jpg" height="400" alt="Premium Car Detailing - Lamborghini">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">PREMIUM CAR DETAILING</h3>
-                                <p class="carousel-body">PROFESSIONAL \ PRISTINE \ COASTAL SHINE</p>
+                            <div style="height: 500px; background-image: url('/assets/img/slider/lamborghini-detail.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                <div class="carousel-caption">
+                                    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">PREMIUM CAR DETAILING</h2>
+                                    <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">PROFESSIONAL • PRISTINE • COASTAL SHINE</p>
+                                </div>
                             </div>
                         </div>
-                        <!-- End Slide 1 -->
 
-                        <!-- Begin Slide 2 -->
+                        <!-- Slide 2: Porsche Exterior -->
                         <div class="item">
-                            <img src="/assets/img/slider/porcsche-detail.jpg" height="400" alt="Luxury Sports Car Detailing - Porsche">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">LUXURY SPORTS CARS</h3>
-                                <p class="carousel-body">CERAMIC COATING \ PAINT PROTECTION \ EXCELLENCE</p>
+                            <div style="height: 500px; background-image: url('/assets/img/slider/porcsche-detail.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                <div class="carousel-caption">
+                                    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">LUXURY SPORTS CARS</h2>
+                                    <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">CERAMIC COATING • PAINT PROTECTION • EXCELLENCE</p>
+                                </div>
                             </div>
                         </div>
-                        <!-- End Slide 2 -->
 
-                        <!-- Begin Slide 3 -->
+                        <!-- Slide 3: Porsche Interior -->
                         <div class="item">
-                            <img src="/assets/img/slider/porsche-interior.jpg" height="400" alt="Interior Detailing - Porsche">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">INTERIOR PERFECTION</h3>
-                                <p class="carousel-body">LEATHER CARE \ STEAM CLEANING \ METICULOUS</p>
+                            <div style="height: 500px; background-image: url('/assets/img/slider/porsche-interior.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                <div class="carousel-caption">
+                                    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">INTERIOR PERFECTION</h2>
+                                    <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">LEATHER CARE • STEAM CLEANING • METICULOUS</p>
+                                </div>
                             </div>
                         </div>
-                        <!-- End Slide 3 -->
                     </div>
         
                     <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-1" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    <a class="left carousel-control" href="#hero-carousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" style="color: white; font-size: 30px;"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
-                    <a class="right carousel-control" href="#carousel-1" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    <a class="right carousel-control" href="#hero-carousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" style="color: white; font-size: 30px;"></span>
+                        <span class="sr-only">Next</span>
                     </a>
                 </div>
             </div>
         </div>
+
+        <style>
+        .carousel-caption {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 10;
+        }
+        .carousel-control {
+            background: none !important;
+            border: none !important;
+            color: white !important;
+        }
+        .carousel-indicators {
+            bottom: 20px;
+        }
+        .carousel-indicators li {
+            background-color: rgba(255,255,255,0.5);
+            border: 2px solid white;
+        }
+        .carousel-indicators .active {
+            background-color: white;
+        }
+        @media (max-width: 768px) {
+            .carousel-caption h2 {
+                font-size: 28px !important;
+            }
+            .carousel-caption p {
+                font-size: 16px !important;
+            }
+            .item > div {
+                height: 300px !important;
+            }
+        }
+        </style>
     </section>
     <!-- End #carousel-section -->
 
