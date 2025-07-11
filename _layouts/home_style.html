@@ -100,6 +100,27 @@
         .carousel-indicators .active {
             background-color: white;
         }
+        /* Improve image quality on all devices */
+        .item > div {
+            background-attachment: fixed;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            background-blend-mode: normal;
+        }
+
+        @media (min-width: 769px) {
+            .item > div {
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                background-attachment: scroll !important;
+                image-rendering: high-quality !important;
+                image-rendering: -webkit-optimize-contrast !important;
+                backface-visibility: hidden;
+                transform: translateZ(0);
+            }
+        }
+
         @media (max-width: 768px) {
             .carousel-caption h2 {
                 font-size: 28px !important;
@@ -109,6 +130,7 @@
             }
             .item > div {
                 height: 300px !important;
+                background-attachment: scroll !important;
             }
         }
         </style>

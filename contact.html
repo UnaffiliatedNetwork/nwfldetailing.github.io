@@ -3,86 +3,154 @@ layout: default_style
 permalink: /contact
 published: true
 ---
-<!-- Main Container -->
 
-<div class="container-fluid-kamn">
-  <div class="row">
+<!-- Contact Page Header -->
+<section class="contact-hero" style="background: linear-gradient(135deg, #2c5aa0 0%, #1a365d 100%); padding: 60px 0; color: white; text-align: center;">
     <div class="container">
-      <div class="col-lg-4">
-        <h4>Contact NW Florida Detailing:</h4>
+        <h1 style="font-size: 48px; margin-bottom: 20px;">Contact Us</h1>
+        <p style="font-size: 20px; max-width: 800px; margin: 0 auto;">Ready to transform your vehicle? Get in touch for professional detailing services</p>
+    </div>
+</section>
 
-        <p class="block-author">{{ site.company_name }}</p>
-        <p>{{ site.address_line }}</p>
-        <p>Phone: {{ site.telephone_number }}</p>
-        {% if site.fax_number %}<p>Fax: {{ site.fax_number }}</p>{% endif %}
+<!-- Main Contact Section -->
+<section class="contact-section" style="padding: 80px 0; background: #f8f9fa;">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Information -->
+      <div class="col-lg-4" style="margin-bottom: 40px;">
+        <div class="contact-info" style="background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); height: 100%;">
+          
+          <h3 style="color: #1a365d; font-size: 28px; margin-bottom: 30px; font-weight: 700;">Get In Touch</h3>
+          
+          <!-- Contact Details -->
+          <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+            <div style="color: #2c5aa0; margin-right: 20px;">
+              <i class="fa fa-phone" style="font-size: 1.5em;"></i>
+            </div>
+            <div>
+              <h5 style="color: #1a365d; margin-bottom: 5px; font-weight: 600;">Phone</h5>
+              <p style="margin: 0; color: #666;">{{ site.telephone_number }}</p>
+            </div>
+          </div>
 
-        <em class="block-author">Email: {{ site.company_email }}</em> <br>
-        <br>
-        
-        <h4>Service Areas:</h4>
-        <p>We proudly serve the Northwest Florida region including:</p>
-        <ul>
-          <li>Pensacola</li>
-          <li>Destin</li>
-          <li>Fort Walton Beach</li>
-          <li>Crestview</li>
-          <li>Navarre</li>
-          <li>Gulf Breeze</li>
-          <li>Milton</li>
-        </ul>
-        
-        <h4>Mobile Service Available:</h4>
-        <p>We come to you! Mobile detailing services available throughout our service area.</p>
+          <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+            <div style="color: #2c5aa0; margin-right: 20px;">
+              <i class="fa fa-envelope" style="font-size: 1.5em;"></i>
+            </div>
+            <div>
+              <h5 style="color: #1a365d; margin-bottom: 5px; font-weight: 600;">Email</h5>
+              <p style="margin: 0; color: #666;">{{ site.company_email }}</p>
+            </div>
+          </div>
+
+          <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+            <div style="color: #2c5aa0; margin-right: 20px;">
+              <i class="fa fa-map-marker" style="font-size: 1.5em;"></i>
+            </div>
+            <div>
+              <h5 style="color: #1a365d; margin-bottom: 5px; font-weight: 600;">Service Area</h5>
+              <p style="margin: 0; color: #666;">Northwest Florida</p>
+            </div>
+          </div>
+          
+          <h4 style="color: #1a365d; font-size: 20px; margin-bottom: 15px; font-weight: 700;">Service Areas:</h4>
+          <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+            <p style="margin-bottom: 15px; color: #666;">We proudly serve the Northwest Florida region including:</p>
+            <div class="service-areas" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Pensacola</span>
+              <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Destin</span>
+              <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Fort Walton Beach</span>
+              <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Crestview</span>
+              <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Navarre</span>
+              <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Gulf Breeze</span>
+              <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Milton</span>
+            </div>
+          </div>
+          
+          <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #4a90a4 0%, #2c5aa0 100%); border-radius: 10px; text-align: center;">
+            <i class="fa fa-mobile" style="font-size: 2em; color: white; margin-bottom: 15px;"></i>
+            <h5 style="color: white; margin-bottom: 10px; font-weight: 600;">Mobile Service Available</h5>
+            <p style="color: white; margin: 0; font-size: 14px;">We come to you! Professional detailing at your location.</p>
+          </div>
+        </div>
       </div>
+
+      <!-- Contact Form -->
       <div class="col-lg-8">
-        <div class="feedback-form">
-          <h4>Request a Quote or Schedule Service:</h4>
-          <p>Fill out the form below and we'll get back to you with pricing and availability. Please include details about your vehicle and the services you're interested in.</p>
+        <div class="contact-form" style="background: white; padding: 50px 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+          <h3 style="color: #1a365d; font-size: 28px; margin-bottom: 20px; font-weight: 700;">Request a Quote</h3>
+          <p style="color: #666; margin-bottom: 40px; font-size: 16px;">Fill out the form below and we'll get back to you with pricing and availability. Please include details about your vehicle and the services you're interested in.</p>
 
           <div id="contact-response"></div>
           
           <form id="contact-form">
-            <fieldset>
-              <div class="form-group form-group-fullname">
-                <label class="control-label" for="fullname">NAME *</label>
-                <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group" style="margin-bottom: 25px;">
+                  <label style="color: #1a365d; font-weight: 600; margin-bottom: 8px; display: block;">NAME *</label>
+                  <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name" style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px;">
+                </div>
               </div>
-              <div class="form-group form-group-email">
-                <label class="control-label" for="email">E-MAIL *</label>
-                <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail">
+              <div class="col-md-6">
+                <div class="form-group" style="margin-bottom: 25px;">
+                  <label style="color: #1a365d; font-weight: 600; margin-bottom: 8px; display: block;">E-MAIL *</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail" style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px;">
+                </div>
               </div>
-              <div class="form-group form-group-phone">
-                <label class="control-label" for="phone">PHONE NUMBER</label>
-                <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Your Phone Number">
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group" style="margin-bottom: 25px;">
+                  <label style="color: #1a365d; font-weight: 600; margin-bottom: 8px; display: block;">PHONE NUMBER</label>
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter Your Phone Number" style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px;">
+                </div>
               </div>
-              <div class="form-group form-group-vehicle">
-                <label class="control-label" for="vehicle">VEHICLE INFO</label>
-                <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Year, Make, Model (e.g., 2020 Honda Accord)">
+              <div class="col-md-6">
+                <div class="form-group" style="margin-bottom: 25px;">
+                  <label style="color: #1a365d; font-weight: 600; margin-bottom: 8px; display: block;">VEHICLE INFO</label>
+                  <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Year, Make, Model (e.g., 2020 Honda Accord)" style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px;">
+                </div>
               </div>
-              <div class="form-group form-group-service">
-                <label class="control-label" for="service">SERVICE REQUESTED</label>
-                <select class="form-control" name="service" id="service">
-                  <option value="">Select a Service</option>
-                  <option value="basic">Basic Wash & Wax</option>
-                  <option value="full">Full Interior & Exterior</option>
-                  <option value="premium">Premium Detail</option>
-                  <option value="protection">Paint Protection/Ceramic Coating</option>
-                  <option value="correction">Paint Correction</option>
-                  <option value="other">Other (specify in message)</option>
-                </select>
-              </div>
-              <div class="form-group form-group-message">
-                <label class="control-label" for="message">MESSAGE *</label>
-                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Please provide any additional details about your vehicle's condition or specific services needed..."></textarea>
-              </div>           
-              <button type="button" class="btn btn-primary" onclick="alert('Thank you for your interest! Please call or email us directly to schedule your appointment.')">Submit Quote Request</button>
-            </fieldset>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 25px;">
+              <label style="color: #1a365d; font-weight: 600; margin-bottom: 8px; display: block;">SERVICE REQUESTED</label>
+              <select class="form-control" name="service" id="service" style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px;">
+                <option value="">Select a Service</option>
+                <option value="basic">Basic Clean - $75</option>
+                <option value="standard">Standard Detail - $150</option>
+                <option value="premium">Premium Detail - $500</option>
+                <option value="ultimate">Ultimate Protection - $1200</option>
+                <option value="correction">Paint Correction</option>
+                <option value="ceramic">Ceramic Coating</option>
+                <option value="other">Other (specify in message)</option>
+              </select>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 30px;">
+              <label style="color: #1a365d; font-weight: 600; margin-bottom: 8px; display: block;">MESSAGE *</label>
+              <textarea class="form-control" name="message" id="message" rows="5" placeholder="Please provide any additional details about your vehicle's condition, preferred scheduling, or specific services needed..." style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; resize: vertical;"></textarea>
+            </div>
+            
+            <button type="button" onclick="alert('Thank you for your interest! Please call or email us directly to schedule your appointment.')" style="background: linear-gradient(135deg, #2c5aa0 0%, #1a365d 100%); color: white; padding: 15px 40px; border: none; border-radius: 50px; font-size: 18px; font-weight: 600; cursor: pointer; transition: transform 0.3s ease;">
+              <i class="fa fa-paper-plane" style="margin-right: 10px;"></i>Submit Quote Request
+            </button>
           </form>
-          
         </div> 
       </div>
     </div>
   </div>
-</div>    
+</section>
+
+<style>
+.form-control:focus {
+  border-color: #2c5aa0 !important;
+  box-shadow: 0 0 0 0.2rem rgba(44, 90, 160, 0.25) !important;
+}
+button:hover {
+  transform: translateY(-2px);
+}
+</style>
     
 <!--End Main Container -->

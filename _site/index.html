@@ -30,17 +30,17 @@
 <nav id="navbar-section" class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #000000; border-color: #000000; min-height: 120px; position: fixed; top: 0; width: 100%; z-index: 1000;">
   <div class="container">
   
-  <div class="navbar-header" style="height: 160px; display: flex; align-items: center;">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px;">
+  <div class="navbar-header" style="height: 160px; display: flex; align-items: center; justify-content: space-between;">
+    <a class="navbar-brand wow fadeInDownBig" href="index.html" style="padding: 15px; display: flex; align-items: center;">
+      <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 200px; width: auto;">
+    </a>
+    
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 15px;">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar" style="background-color: white;"></span>
       <span class="icon-bar" style="background-color: white;"></span>
       <span class="icon-bar" style="background-color: white;"></span>
     </button>
-
-    <a class="navbar-brand wow fadeInDownBig" href="index.html" style="padding: 15px; display: flex; align-items: center;">
-      <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 200px; width: auto;">
-    </a>
   </div>
 
   <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse" style="margin-top: 40px;">
@@ -91,7 +91,7 @@ body {
 /* Specific carousel positioning for homepage */
 #carousel-section {
   margin-top: 0;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 /* Services section normal spacing */
@@ -222,6 +222,27 @@ body {
         .carousel-indicators .active {
             background-color: white;
         }
+        /* Improve image quality on all devices */
+        .item > div {
+            background-attachment: fixed;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            background-blend-mode: normal;
+        }
+
+        @media (min-width: 769px) {
+            .item > div {
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                background-attachment: scroll !important;
+                image-rendering: high-quality !important;
+                image-rendering: -webkit-optimize-contrast !important;
+                backface-visibility: hidden;
+                transform: translateZ(0);
+            }
+        }
+
         @media (max-width: 768px) {
             .carousel-caption h2 {
                 font-size: 28px !important;
@@ -231,6 +252,7 @@ body {
             }
             .item > div {
                 height: 300px !important;
+                background-attachment: scroll !important;
             }
         }
         </style>
