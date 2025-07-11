@@ -1,5 +1,5 @@
 <!-- Header -->
-<nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation" style="background-color: #2d3748; border-color: #2d3748; min-height: 120px;">
+<nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation" style="background-color: #000000; border-color: #000000; min-height: 120px;">
   <div class="container">
   
   <div class="navbar-header" style="height: 120px; display: flex; align-items: center;">
@@ -44,5 +44,26 @@
 #navbar-section .navbar-nav > .active > a {
   background-color: #4a90a4 !important;
   color: white !important;
+}
+
+/* Push content down to account for larger header */
+body {
+  padding-top: 120px;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+  #navbar-section {
+    min-height: 80px !important;
+  }
+  .navbar-header {
+    height: 80px !important;
+  }
+  .navbar-brand img {
+    height: 120px !important;
+  }
 }
 </style>
