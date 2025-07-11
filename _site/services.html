@@ -66,12 +66,21 @@
 
 <style>
 #navbar-section .navbar-nav > li > a:hover {
-  color: white !important;
+  color: #4a90a4 !important;
   background-color: transparent !important;
 }
 #navbar-section .navbar-nav > .active > a {
   background-color: #4a90a4 !important;
   color: white !important;
+}
+
+/* Remove hover effects on service icons */
+.services-icon:hover,
+.services-icon:hover i,
+.services-icon:hover span {
+  color: inherit !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* Push content down to account for larger header */
