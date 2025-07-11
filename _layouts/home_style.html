@@ -115,6 +115,19 @@
     </section>
     <!-- End #carousel-section -->
 
+    <script>
+    $(document).ready(function() {
+        // Initialize Bootstrap carousel
+        $('#hero-carousel').carousel({
+            interval: 5000,
+            ride: 'carousel'
+        });
+        
+        // Ensure carousel starts properly
+        $('#hero-carousel').carousel('cycle');
+    });
+    </script>
+
 
     <!-- Begin #services-section -->
     <section id="services" class="services-section section-global-wrapper">
