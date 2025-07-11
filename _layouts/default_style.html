@@ -5,9 +5,11 @@
   {% include header.html %}
   {% include script.html %}
 
-  <body>
-    {{ content }}
+  <body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <div style="flex: 1; padding-top: 40px;">
+      {{ content }}
+    </div>
+    {% include footer.html %}
   </body>
 
-  {% include footer.html %}
 </html>

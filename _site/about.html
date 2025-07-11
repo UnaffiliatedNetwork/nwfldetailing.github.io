@@ -76,13 +76,13 @@
 
 /* Push content down to account for larger header */
 body {
-  padding-top: 160px;
+  padding-top: 200px;
 }
 
 /* Specific carousel positioning for homepage */
 #carousel-section {
-  margin-top: -160px;
-  padding-top: 160px;
+  margin-top: 0;
+  padding-top: 50px;
 }
 
 /* Services section normal spacing */
@@ -118,8 +118,9 @@ body {
 </script>
 
 
-  <body>
-    <!-- Main Container -->
+  <body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <div style="flex: 1; padding-top: 40px;">
+      <!-- Main Container -->
 
 <div class="row container-kamn">
   <div style="text-align: center; padding: 40px 0; background: linear-gradient(135deg, #a3d5d3 0%, #8bb6b4 100%);">
@@ -180,9 +181,8 @@ body {
 
 <!--End Main Container -->
 
-  </body>
-
-  <!-- Footer -->
+    </div>
+    <!-- Footer -->
 <footer> 
   <div class="container">
     <div class="row">
@@ -211,5 +211,7 @@ body {
     <p>&copy; Copyright 2025, <a href="https://www.nwfldetailing.com">NWFLDetailing.com</a></p>
   </div>
 </footer>
+
+  </body>
 
 </html>
