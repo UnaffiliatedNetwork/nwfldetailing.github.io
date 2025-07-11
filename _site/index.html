@@ -69,25 +69,19 @@ $(document).ready(function() {
   // Get current page URL
   var currentPath = window.location.pathname;
   
-  // Remove active class from all nav items
+  // Remove active class from all nav items first
   $('.navbar-nav li').removeClass('active');
   
   // Add active class based on current path
   if (currentPath === '/' || currentPath === '/index.html') {
-    $('.navbar-nav li:has(a[href="/"])').addClass('active');
+    $('.navbar-nav li').eq(0).addClass('active');
   } else if (currentPath.includes('/about')) {
-    $('.navbar-nav li:has(a[href="/about.html"])').addClass('active');
+    $('.navbar-nav li').eq(1).addClass('active');
   } else if (currentPath.includes('/services')) {
-    $('.navbar-nav li:has(a[href="/services.html"])').addClass('active');
+    $('.navbar-nav li').eq(2).addClass('active');
   } else if (currentPath.includes('/contact')) {
-    $('.navbar-nav li:has(a[href="/contact.html"])').addClass('active');
+    $('.navbar-nav li').eq(3).addClass('active');
   }
-  
-  // Handle clicks on navigation links
-  $('.navbar-nav a').click(function() {
-    $('.navbar-nav li').removeClass('active');
-    $(this).parent('li').addClass('active');
-  });
 });
 </script>
 
@@ -98,7 +92,7 @@ $(document).ready(function() {
 }
 #navbar-section .navbar-nav > .active > a {
   background-color: #4a90a4 !important;
-  color: #4a90a4 !important;
+  color: #ffffff !important;
 }
 
 /* Remove hover effects on service icons */
@@ -112,13 +106,13 @@ $(document).ready(function() {
 
 /* Push content down to account for larger header */
 body {
-  padding-top: 210px;
+  padding-top: 180px;
 }
 
 /* Specific carousel positioning for homepage */
 #carousel-section {
-  margin-top: auto;
-  padding-top: 0px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Services section normal spacing */
@@ -318,7 +312,6 @@ body {
                         <p class="services-icon"><span class="fa fa-car fa-5x"></span></p>
                         <h4 class="services-title">Exterior Detailing</h4>
                         <p class="services-body">Complete exterior wash, wax, and protection. Hand washing, clay bar treatment, and premium wax application for that perfect shine.</p>
-                        <p class="services-more"><a href="#">Learn More</a></p>
                     </div>
                 </div>
         
@@ -327,7 +320,6 @@ body {
                         <p class="services-icon"><i class="fa fa-home fa-5x"></i></p>
                         <h4 class="services-title">Interior Detailing</h4>
                         <p class="services-body">Deep cleaning of interior surfaces, upholstery, carpets, and dashboard. Steam cleaning and conditioning for a fresh, clean cabin.</p>
-                        <p class="services-more"><a href="#">Learn More</a></p>
                     </div>
                 </div>
         
@@ -336,7 +328,6 @@ body {
                         <p class="services-icon"><i class="fa fa-shield fa-5x"></i></p>
                         <h4 class="services-title">Paint Protection</h4>
                         <p class="services-body">Professional paint correction, ceramic coating, and paint protection film application to keep your vehicle looking new.</p>
-                        <p class="services-more"><a href="#">Learn More</a></p>
                     </div>        
                 </div>
             </div>
@@ -349,7 +340,6 @@ body {
                         <p class="services-icon"><span class="fa fa-magic fa-5x"></span></p>
                         <h4 class="services-title">Paint Correction</h4>
                         <p class="services-body">Remove swirl marks, scratches, and imperfections. Multi-stage polishing process to restore your paint's original luster.</p>
-                        <p class="services-more"><a href="#">Learn More</a></p>
                     </div>
                 </div>
         
@@ -358,7 +348,6 @@ body {
                         <p class="services-icon"><i class="fa fa-star fa-5x"></i></p>
                         <h4 class="services-title">Premium Packages</h4>
                         <p class="services-body">Complete detail packages combining multiple services for maximum value and protection. Perfect for special occasions.</p>
-                        <p class="services-more"><a href="#">Learn More</a></p>
                     </div>
                 </div>
         
@@ -367,7 +356,6 @@ body {
                         <p class="services-icon"><i class="fa fa-phone fa-5x"></i></p>
                         <h4 class="services-title">Mobile Service</h4>
                         <p class="services-body">We come to you! Professional detailing at your home or office. Convenient scheduling that fits your busy lifestyle.</p>
-                        <p class="services-more"><a href="#">Learn More</a></p>
                     </div>
                 </div>
             </div>

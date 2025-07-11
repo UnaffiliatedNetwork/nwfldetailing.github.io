@@ -41,25 +41,19 @@ $(document).ready(function() {
   // Get current page URL
   var currentPath = window.location.pathname;
   
-  // Remove active class from all nav items
+  // Remove active class from all nav items first
   $('.navbar-nav li').removeClass('active');
   
   // Add active class based on current path
   if (currentPath === '/' || currentPath === '/index.html') {
-    $('.navbar-nav li:has(a[href="/"])').addClass('active');
+    $('.navbar-nav li').eq(0).addClass('active');
   } else if (currentPath.includes('/about')) {
-    $('.navbar-nav li:has(a[href="/about.html"])').addClass('active');
+    $('.navbar-nav li').eq(1).addClass('active');
   } else if (currentPath.includes('/services')) {
-    $('.navbar-nav li:has(a[href="/services.html"])').addClass('active');
+    $('.navbar-nav li').eq(2).addClass('active');
   } else if (currentPath.includes('/contact')) {
-    $('.navbar-nav li:has(a[href="/contact.html"])').addClass('active');
+    $('.navbar-nav li').eq(3).addClass('active');
   }
-  
-  // Handle clicks on navigation links
-  $('.navbar-nav a').click(function() {
-    $('.navbar-nav li').removeClass('active');
-    $(this).parent('li').addClass('active');
-  });
 });
 </script>
 
@@ -70,7 +64,7 @@ $(document).ready(function() {
 }
 #navbar-section .navbar-nav > .active > a {
   background-color: #4a90a4 !important;
-  color: #4a90a4 !important;
+  color: #ffffff !important;
 }
 
 /* Remove hover effects on service icons */
@@ -84,13 +78,13 @@ $(document).ready(function() {
 
 /* Push content down to account for larger header */
 body {
-  padding-top: 210px;
+  padding-top: 180px;
 }
 
 /* Specific carousel positioning for homepage */
 #carousel-section {
-  margin-top: auto;
-  padding-top: 0px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Services section normal spacing */
