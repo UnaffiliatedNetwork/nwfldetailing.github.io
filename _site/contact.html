@@ -35,27 +35,27 @@
       <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 200px; width: auto;">
     </a>
 
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 15px;">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 15px; background-color: transparent; border: 2px solid white;">
       <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar" style="background-color: white;"></span>
-      <span class="icon-bar" style="background-color: white;"></span>
-      <span class="icon-bar" style="background-color: white;"></span>
+      <span class="icon-bar" style="background-color: black;"></span>
+      <span class="icon-bar" style="background-color: black;"></span>
+      <span class="icon-bar" style="background-color: black;"></span>
     </button>
   </div>
 
   <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse" style="margin-top: 40px;">
     <ul class="nav navbar-nav pull-right">
-      <li class="active">
-        <a href="/" style="color: white; font-weight: 500; font-size: 16px; padding: 15px 20px;">Home</a>
+      <li>
+        <a href="/" style="color: white; font-weight: 700; font-size: 18px; padding: 18px 25px;">Home</a>
       </li>
       <li>
-        <a href="/about.html" style="color: white; font-weight: 500; font-size: 16px; padding: 15px 20px;">About</a>
+        <a href="/about.html" style="color: white; font-weight: 700; font-size: 18px; padding: 18px 25px;">About</a>
       </li>
       <li>
-        <a href="/services.html" style="color: white; font-weight: 500; font-size: 16px; padding: 15px 20px;">Services</a>
+        <a href="/services.html" style="color: white; font-weight: 700; font-size: 18px; padding: 18px 25px;">Services</a>
       </li>
       <li>
-        <a href="/contact.html" style="color: white; font-weight: 500; font-size: 16px; padding: 15px 20px;"><span>Contact</span></a>
+        <a href="/contact.html" style="color: white; font-weight: 700; font-size: 18px; padding: 18px 25px;"><span>Contact</span></a>
       </li>
     </ul>         
   </div>
@@ -123,7 +123,7 @@ body {
 /* Adjust for mobile */
 @media (max-width: 768px) {
   body {
-    padding-top: 160px;
+    padding-top: 140px;
   }
   #navbar-section {
     min-height: 120px !important;
@@ -137,6 +137,11 @@ body {
   #carousel-section {
     margin-top: 0;
     padding-top: 0;
+  }
+  .navbar-responsive-collapse {
+    margin-top: 0px !important;
+    background-color: #000000;
+    border: none;
   }
 }
 </style>
@@ -172,21 +177,11 @@ body {
           <!-- Contact Details -->
           <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
             <div style="color: #2c5aa0; margin-right: 20px;">
-              <i class="fa fa-phone" style="font-size: 1.5em;"></i>
-            </div>
-            <div>
-              <h5 style="color: #1a365d; margin-bottom: 5px; font-weight: 600;">Phone</h5>
-              <p style="margin: 0; color: #666;"></p>
-            </div>
-          </div>
-
-          <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-            <div style="color: #2c5aa0; margin-right: 20px;">
               <i class="fa fa-envelope" style="font-size: 1.5em;"></i>
             </div>
             <div>
               <h5 style="color: #1a365d; margin-bottom: 5px; font-weight: 600;">Email</h5>
-              <p style="margin: 0; color: #666;">AP@nwfldetailing.com</p>
+              <p style="margin: 0; color: #666;">AP@NWFLDetailing.com</p>
             </div>
           </div>
 
@@ -211,6 +206,7 @@ body {
               <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Navarre</span>
               <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Gulf Breeze</span>
               <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Milton</span>
+              <span style="color: #2c5aa0; font-weight: 500;"><i class="fa fa-check" style="margin-right: 8px;"></i>Panama City</span>
             </div>
           </div>
           
@@ -265,8 +261,8 @@ body {
               <label style="color: #1a365d; font-weight: 600; margin-bottom: 8px; display: block;">SERVICE REQUESTED</label>
               <select class="form-control" name="service" id="service" style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px;">
                 <option value="">Select a Service</option>
-                <option value="basic">Basic Clean - $75</option>
-                <option value="standard">Standard Detail - $150</option>
+                <option value="basic">Basic Clean - $100</option>
+                <option value="standard">Standard Detail - $175</option>
                 <option value="premium">Premium Detail - $500</option>
                 <option value="ultimate">Ultimate Protection - $1200</option>
                 <option value="correction">Paint Correction</option>
