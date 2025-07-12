@@ -35,11 +35,11 @@
       <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 200px; width: auto;">
     </a>
 
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 15px; background-color: transparent; border: 2px solid white;">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 5px; background-color: transparent; border: none; padding: 10px;">
       <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar" style="background-color: black;"></span>
-      <span class="icon-bar" style="background-color: black;"></span>
-      <span class="icon-bar" style="background-color: black;"></span>
+      <span class="icon-bar" style="background-color: white; height: 3px; width: 25px; display: block; margin: 4px 0; border-radius: 2px;"></span>
+      <span class="icon-bar" style="background-color: white; height: 3px; width: 25px; display: block; margin: 4px 0; border-radius: 2px;"></span>
+      <span class="icon-bar" style="background-color: white; height: 3px; width: 25px; display: block; margin: 4px 0; border-radius: 2px;"></span>
     </button>
   </div>
 
@@ -130,18 +130,58 @@ body {
   }
   .navbar-header {
     height: 120px !important;
+    justify-content: center !important;
+    position: relative;
+  }
+  .navbar-brand {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
   .navbar-brand img {
-    height: 100px !important;
+    height: 120px !important;
+  }
+  .navbar-toggle {
+    position: absolute !important;
+    right: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
   }
   #carousel-section {
     margin-top: 0;
     padding-top: 0;
   }
   .navbar-responsive-collapse {
-    margin-top: 0px !important;
-    background-color: #000000;
-    border: none;
+    position: fixed !important;
+    top: 0 !important;
+    right: -300px !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background-color: #000000 !important;
+    z-index: 9999 !important;
+    padding: 80px 20px 20px !important;
+    transition: right 0.3s ease !important;
+    border: none !important;
+    margin: 0 !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3) !important;
+  }
+  .navbar-responsive-collapse.in {
+    right: 0 !important;
+  }
+  .navbar-responsive-collapse .navbar-nav {
+    margin: 0 !important;
+    float: none !important;
+  }
+  .navbar-responsive-collapse .navbar-nav li {
+    margin-bottom: 10px !important;
+  }
+  .navbar-responsive-collapse .navbar-nav li a {
+    color: white !important;
+    padding: 15px 20px !important;
+    border-radius: 5px !important;
+    display: block !important;
+    border-bottom: 1px solid #333 !important;
   }
 }
 </style>
@@ -173,7 +213,7 @@ body {
                     <div class="carousel-inner">
                         <!-- Slide 1: Premium Detailing -->
                         <div class="item active">
-                            <div style="height: 750px; background-image: url('/assets/img/slider/premium-detailing.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                            <div style="height: 850px; background-image: url('/assets/img/slider/premium-detailing.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                                 <div class="carousel-caption">
                                     <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">PREMIUM CAR DETAILING</h2>
                                     <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">PROFESSIONAL • PRISTINE • COASTAL SHINE</p>
@@ -183,7 +223,7 @@ body {
 
                         <!-- Slide 2: Luxury Sports Cars -->
                         <div class="item">
-                            <div style="height: 750px; background-image: url('/assets/img/slider/lamborghini-new.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                            <div style="height: 850px; background-image: url('/assets/img/slider/lamborghini-new.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                                 <div class="carousel-caption">
                                     <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">LUXURY SPORTS CARS</h2>
                                     <p style="color: rgb(255, 255, 255); text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">CERAMIC COATING • PAINT PROTECTION • EXCELLENCE</p>
@@ -193,7 +233,7 @@ body {
 
                         <!-- Slide 3: Interior Beauty -->
                         <div class="item">
-                            <div style="height: 750px; background-image: url('/assets/img/slider/interior.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                            <div style="height: 850px; background-image: url('/assets/img/slider/interior.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                                 <div class="carousel-caption">
                                     <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">INTERIOR PERFECTION</h2>
                                     <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">LEATHER CARE • STEAM CLEANING • METICULOUS</p>
@@ -203,7 +243,7 @@ body {
 
                         <!-- Slide 4: Emerald Coast-->
                         <div class="item">
-                            <div style="height: 750px; background-image: url('/assets/img/slider/emerald-coast.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                            <div style="height: 850px; background-image: url('/assets/img/slider/emerald-coast.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                                 <div class="carousel-caption">
                                     <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">SERVING ALL OF NORTHWEST FLORIDA</h2>
                                     <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">PRECISION • VALUE • GUARANTEED SATISFACTION</p>
@@ -228,11 +268,12 @@ body {
         <style>
         .carousel-caption {
             position: absolute;
-            bottom: 100px;
+            bottom: 150px;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
             z-index: 10;
+            width: 80%;
         }
         .carousel-control {
             background: none !important;

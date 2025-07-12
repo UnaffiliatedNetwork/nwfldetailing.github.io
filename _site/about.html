@@ -35,11 +35,11 @@
       <img src="/assets/img/nwfl-main-logo.png" alt="NW Florida Detailing" style="height: 200px; width: auto;">
     </a>
 
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 15px; background-color: transparent; border: 2px solid white;">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="margin-top: 45px; margin-right: 5px; background-color: transparent; border: none; padding: 10px;">
       <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar" style="background-color: black;"></span>
-      <span class="icon-bar" style="background-color: black;"></span>
-      <span class="icon-bar" style="background-color: black;"></span>
+      <span class="icon-bar" style="background-color: white; height: 3px; width: 25px; display: block; margin: 4px 0; border-radius: 2px;"></span>
+      <span class="icon-bar" style="background-color: white; height: 3px; width: 25px; display: block; margin: 4px 0; border-radius: 2px;"></span>
+      <span class="icon-bar" style="background-color: white; height: 3px; width: 25px; display: block; margin: 4px 0; border-radius: 2px;"></span>
     </button>
   </div>
 
@@ -130,18 +130,58 @@ body {
   }
   .navbar-header {
     height: 120px !important;
+    justify-content: center !important;
+    position: relative;
+  }
+  .navbar-brand {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
   .navbar-brand img {
-    height: 100px !important;
+    height: 120px !important;
+  }
+  .navbar-toggle {
+    position: absolute !important;
+    right: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
   }
   #carousel-section {
     margin-top: 0;
     padding-top: 0;
   }
   .navbar-responsive-collapse {
-    margin-top: 0px !important;
-    background-color: #000000;
-    border: none;
+    position: fixed !important;
+    top: 0 !important;
+    right: -300px !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background-color: #000000 !important;
+    z-index: 9999 !important;
+    padding: 80px 20px 20px !important;
+    transition: right 0.3s ease !important;
+    border: none !important;
+    margin: 0 !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3) !important;
+  }
+  .navbar-responsive-collapse.in {
+    right: 0 !important;
+  }
+  .navbar-responsive-collapse .navbar-nav {
+    margin: 0 !important;
+    float: none !important;
+  }
+  .navbar-responsive-collapse .navbar-nav li {
+    margin-bottom: 10px !important;
+  }
+  .navbar-responsive-collapse .navbar-nav li a {
+    color: white !important;
+    padding: 15px 20px !important;
+    border-radius: 5px !important;
+    display: block !important;
+    border-bottom: 1px solid #333 !important;
   }
 }
 </style>
@@ -208,27 +248,27 @@ body {
         <blockquote>
           <em>"Outstanding service! My car has never looked better. The attention to detail is incredible and the team really knows what they're doing. I highly recommend NW Florida Detailing for anyone who wants their vehicle to look pristine."</em>
         </blockquote>
-        <p class="block-author">MICHAEL R.</p>
+        <p class="block-author" style="text-align: right; font-weight: bold;">MICHAEL R.</p>
 
         <blockquote>
           <em>"Professional and thorough! They transformed my SUV inside and out. The ceramic coating has kept my vehicle protected for months. Worth every penny for the quality of work."</em>
         </blockquote>
-        <p class="block-author">SARAH J.</p>
+        <p class="block-author" style="text-align: right; font-weight: bold;">SARAH J.</p>
 
         <blockquote>
           <em>"Exceptional paint correction work on my classic car. They removed years of swirl marks and scratches I thought were permanent. The results exceeded my expectations completely."</em>
         </blockquote>
-        <p class="block-author">DAVID M.</p>
+        <p class="block-author" style="text-align: right; font-weight: bold;">DAVID M.</p>
 
         <blockquote>
           <em>"Mobile service was incredibly convenient. They came to my office and detailed my truck while I worked. Professional team with amazing results every time."</em>
         </blockquote>
-        <p class="block-author">JENNIFER L.</p>
+        <p class="block-author" style="text-align: right; font-weight: bold;">JENNIFER L.</p>
 
         <blockquote>
           <em>"Best detailing service in Northwest Florida! Interior cleaning was perfect and the exterior shine lasted for months. I'll be a customer for life."</em>
         </blockquote>
-        <p class="block-author">ROBERT C.</p>
+        <p class="block-author" style="text-align: right; font-weight: bold;">ROBERT C.</p>
         <br><br>
         <p>Ready to experience the difference professional detailing can make? Contact us today to schedule your appointment and see why customers throughout Northwest Florida trust us with their vehicles.</p>
     </div>  
