@@ -121,7 +121,9 @@
             background-color: white;
         }
 
-        /* Responsive Typography */
+        /* Dynamic Responsive Typography for Carousel and Services */
+        
+        /* Mobile Phones */
         @media (max-width: 480px) {
             .carousel-caption h2 {
                 font-size: 18px !important;
@@ -134,6 +136,7 @@
             }
         }
 
+        /* Tablets Portrait */
         @media (min-width: 481px) and (max-width: 768px) {
             .carousel-caption h2 {
                 font-size: 24px !important;
@@ -146,6 +149,7 @@
             }
         }
 
+        /* Tablets Landscape / Small Laptops */
         @media (min-width: 769px) and (max-width: 1024px) {
             .carousel-caption h2 {
                 font-size: 36px !important;
@@ -158,6 +162,7 @@
             }
         }
 
+        /* Standard Desktop and Above */
         @media (min-width: 1025px) {
             .carousel-caption h2 {
                 font-size: 48px !important;
@@ -169,50 +174,101 @@
                 line-height: 1.4 !important;
             }
         }
+
+        /* Dynamic Services Section Responsive Styling */
+        .services-section {
+            transition: all 0.3s ease;
+        }
+        
+        .services-header-title, .services-title, .services-body, .services-icon {
+            transition: all 0.3s ease;
+        }
         </style>
     </section>
     <!-- End #carousel-section -->
 
     <script>
-    // Dynamic Responsive Carousel Sizing Function
-    function calculateCarouselHeight() {
+    // Dynamic Responsive Carousel and Services Sizing Function
+    function calculateResponsiveDimensions() {
         var screenWidth = $(window).width();
         var screenHeight = $(window).height();
         var carouselHeight;
         var servicesMargin;
         var captionBottom;
+        var servicesHeaderTitle;
+        var servicesHeaderBody;
+        var servicesTitle;
+        var servicesBody;
+        var servicesIconSize;
+        var servicesPadding;
         
-        // Calculate optimal height based on screen resolution and device type
+        // Calculate optimal dimensions based on screen resolution and device type
         if (screenWidth <= 480) {
             // Mobile phones
             carouselHeight = Math.max(300, screenHeight * 0.4);
             servicesMargin = 50;
             captionBottom = 30;
+            servicesHeaderTitle = 24;
+            servicesHeaderBody = 14;
+            servicesTitle = 18;
+            servicesBody = 13;
+            servicesIconSize = 'fa-3x';
+            servicesPadding = 30;
         } else if (screenWidth <= 768) {
             // Tablets portrait
             carouselHeight = Math.max(400, screenHeight * 0.5);
             servicesMargin = 100;
             captionBottom = 50;
+            servicesHeaderTitle = 28;
+            servicesHeaderBody = 16;
+            servicesTitle = 20;
+            servicesBody = 14;
+            servicesIconSize = 'fa-4x';
+            servicesPadding = 40;
         } else if (screenWidth <= 1024) {
             // Tablets landscape / small laptops
             carouselHeight = Math.max(500, screenHeight * 0.6);
             servicesMargin = 150;
             captionBottom = 80;
+            servicesHeaderTitle = 32;
+            servicesHeaderBody = 17;
+            servicesTitle = 22;
+            servicesBody = 15;
+            servicesIconSize = 'fa-4x';
+            servicesPadding = 45;
         } else if (screenWidth <= 1440) {
             // Standard desktop
             carouselHeight = Math.max(600, screenHeight * 0.7);
             servicesMargin = 200;
             captionBottom = 120;
+            servicesHeaderTitle = 36;
+            servicesHeaderBody = 18;
+            servicesTitle = 24;
+            servicesBody = 16;
+            servicesIconSize = 'fa-5x';
+            servicesPadding = 50;
         } else if (screenWidth <= 1920) {
             // Full HD desktop
             carouselHeight = Math.max(800, screenHeight * 0.75);
             servicesMargin = 250;
             captionBottom = 150;
+            servicesHeaderTitle = 40;
+            servicesHeaderBody = 20;
+            servicesTitle = 26;
+            servicesBody = 17;
+            servicesIconSize = 'fa-5x';
+            servicesPadding = 55;
         } else {
             // 4K and ultrawide monitors
             carouselHeight = Math.max(1000, screenHeight * 0.8);
             servicesMargin = 300;
             captionBottom = 180;
+            servicesHeaderTitle = 48;
+            servicesHeaderBody = 24;
+            servicesTitle = 30;
+            servicesBody = 20;
+            servicesIconSize = 'fa-6x';
+            servicesPadding = 60;
         }
         
         // Ensure minimum and maximum bounds
@@ -222,13 +278,19 @@
         return {
             height: Math.round(carouselHeight),
             servicesMargin: servicesMargin,
-            captionBottom: captionBottom
+            captionBottom: captionBottom,
+            servicesHeaderTitle: servicesHeaderTitle,
+            servicesHeaderBody: servicesHeaderBody,
+            servicesTitle: servicesTitle,
+            servicesBody: servicesBody,
+            servicesIconSize: servicesIconSize,
+            servicesPadding: servicesPadding
         };
     }
     
-    // Apply dynamic sizing to carousel
-    function resizeCarousel() {
-        var dimensions = calculateCarouselHeight();
+    // Apply dynamic sizing to carousel and services
+    function resizeCarouselAndServices() {
+        var dimensions = calculateResponsiveDimensions();
         
         // Apply heights to all carousel elements
         $('#carousel-section').css('min-height', dimensions.height + 'px');
@@ -247,12 +309,23 @@
         // Update indicators position
         $('.carousel-indicators').css('bottom', Math.max(20, dimensions.captionBottom - 100) + 'px');
         
-        console.log('Carousel resized to:', dimensions.height + 'px', 'for screen:', $(window).width() + 'x' + $(window).height());
+        // Apply dynamic services styling
+        $('.services-header-title').css('font-size', dimensions.servicesHeaderTitle + 'px');
+        $('.services-header-body').css('font-size', dimensions.servicesHeaderBody + 'px');
+        $('.services-title').css('font-size', dimensions.servicesTitle + 'px');
+        $('.services-body').css('font-size', dimensions.servicesBody + 'px');
+        $('.services-section').css('padding-top', dimensions.servicesPadding + 'px');
+        $('.services-section').css('padding-bottom', dimensions.servicesPadding + 'px');
+        
+        // Update icon sizes dynamically
+        $('.services-icon span, .services-icon i').removeClass('fa-3x fa-4x fa-5x fa-6x').addClass(dimensions.servicesIconSize);
+        
+        console.log('Carousel and Services resized - Carousel:', dimensions.height + 'px', 'Services Header:', dimensions.servicesHeaderTitle + 'px', 'for screen:', $(window).width() + 'x' + $(window).height());
     }
     
     $(document).ready(function() {
-        // Initial carousel sizing
-        resizeCarousel();
+        // Initial carousel and services sizing
+        resizeCarouselAndServices();
         
         // Force carousel initialization
         $('#hero-carousel').carousel({
@@ -273,18 +346,18 @@
         $(window).resize(function() {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(function() {
-                resizeCarousel();
+                resizeCarouselAndServices();
             }, 250);
         });
         
         // Resize on orientation change (mobile devices)
         $(window).on('orientationchange', function() {
             setTimeout(function() {
-                resizeCarousel();
+                resizeCarouselAndServices();
             }, 500);
         });
         
-        console.log('Dynamic responsive carousel initialized');
+        console.log('Dynamic responsive carousel and services initialized');
     });
     </script>
 
