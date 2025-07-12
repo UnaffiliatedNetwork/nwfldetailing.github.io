@@ -39,7 +39,7 @@ googleplus_link:
 markdown: kramdown
 plugins:
   - jekyll-feed
-  
+
 # Force GitHub Pages rebuild
 rebuild_timestamp: 2025-01-11-07-20
 
