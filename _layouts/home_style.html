@@ -13,7 +13,7 @@
                 <div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="5000" style="height: 1600px;">
 
                     <!-- Indicators -->
-                    <ol class="carousel-indicators">
+                    <ol class="carousel-indicators" style="bottom: 50px;">
                         <li data-target="#hero-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#hero-carousel" data-slide-to="1"></li>
                         <li data-target="#hero-carousel" data-slide-to="2"></li>
@@ -154,14 +154,22 @@
 
     <script>
     $(document).ready(function() {
-        // Initialize Bootstrap carousel
+        // Force carousel initialization
         $('#hero-carousel').carousel({
             interval: 5000,
-            ride: 'carousel'
+            ride: 'carousel',
+            pause: 'hover'
         });
         
-        // Ensure carousel starts properly
+        // Ensure first slide is active
+        $('#hero-carousel .item').first().addClass('active');
+        $('#hero-carousel .carousel-indicators li').first().addClass('active');
+        
+        // Start carousel
         $('#hero-carousel').carousel('cycle');
+        
+        // Debug log
+        console.log('Carousel initialized');
     });
     </script>
 
