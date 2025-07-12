@@ -7,10 +7,10 @@
 
   <body>
     <!-- Begin #carousel-section -->
-    <section id="carousel-section" class="section-global-wrapper" style="margin-top: 0; padding-top: 0; min-height: 1200px;">
-        <div class="container-fluid-kamn" style="height: 1200px;">
-            <div class="row" style="height: 1200px;">
-                <div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="5000" style="height: 1200px;">
+    <section id="carousel-section" class="section-global-wrapper" style="margin-top: 0; padding-top: 0;">
+        <div class="container-fluid-kamn">
+            <div class="row">
+                <div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
 
                     <!-- Indicators -->
                     <ol class="carousel-indicators" style="bottom: 50px;">
@@ -24,7 +24,7 @@
                     <div class="carousel-inner">
                         <!-- Slide 1: Premium Detailing -->
                         <div class="item active">
-                            <div style="height: 1200px; background-image: url('/assets/img/slider/premium-detailing.png'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
+                            <div class="carousel-slide" style="background-image: url('/assets/img/slider/premium-detailing.png'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
                                 <div class="carousel-caption">
                                     <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">PREMIUM CAR DETAILING</h2>
                                     <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">PROFESSIONAL • PRISTINE • COASTAL SHINE</p>
@@ -34,7 +34,7 @@
 
                         <!-- Slide 2: Luxury Sports Cars -->
                         <div class="item">
-                            <div style="height: 1200px; background-image: url('/assets/img/slider/lamborghini-new.png'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
+                            <div class="carousel-slide" style="background-image: url('/assets/img/slider/lamborghini-new.png'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
                                 <div class="carousel-caption">
                                     <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">LUXURY SPORTS CARS</h2>
                                     <p style="color: rgb(255, 255, 255); text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">CERAMIC COATING • PAINT PROTECTION • EXCELLENCE</p>
@@ -44,7 +44,7 @@
 
                         <!-- Slide 3: Interior Beauty -->
                         <div class="item">
-                            <div style="height: 1200px; background-image: url('/assets/img/slider/interior.png'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
+                            <div class="carousel-slide" style="background-image: url('/assets/img/slider/interior.png'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
                                 <div class="carousel-caption">
                                     <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">INTERIOR PERFECTION</h2>
                                     <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">LEATHER CARE • STEAM CLEANING • METICULOUS</p>
@@ -54,7 +54,7 @@
 
         <!-- Slide 4: Emerald Coast-->
         <div class="item">
-            <div style="height: 1200px; background-image: url('/assets/img/slider/emerald-coast.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="carousel-slide" style="background-image: url('/assets/img/slider/emerald-coast.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                 <div class="carousel-caption">
                     <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 48px; font-weight: bold;">SERVING ALL OF NORTHWEST FLORIDA</h2>
                     <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 20px;">PRECISION • VALUE • GUARANTEED SATISFACTION</p>
@@ -77,63 +77,64 @@
         </div>
 
         <style>
+        /* Dynamic Responsive Carousel Styles */
         .carousel-inner {
             width: 100%;
             max-height: none !important;
-            height: 1200px !important;
         }
+        
+        .carousel-slide {
+            width: 100%;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            image-rendering: high-quality !important;
+            image-rendering: -webkit-optimize-contrast !important;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+        
         .carousel-caption {
             position: absolute;
-            bottom: 150px;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
             z-index: 1000;
             width: 80%;
         }
+        
         .carousel-control {
             background: none !important;
             border: none !important;
             color: white !important;
         }
+        
         .carousel-indicators {
-            bottom: 20px;
+            z-index: 1001;
         }
+        
         .carousel-indicators li {
             background-color: rgba(255,255,255,0.5);
             border: 2px solid white;
         }
+        
         .carousel-indicators .active {
             background-color: white;
         }
-        /* Improve image quality on all devices */
-        .item > div {
-            background-attachment: fixed;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            background-blend-mode: normal;
-        }
 
-        @media (min-width: 769px) {
-            .item > div {
-                height: 1200px !important;
-                background-repeat: no-repeat !important;
-                background-attachment: scroll !important;
-                image-rendering: high-quality !important;
-                image-rendering: -webkit-optimize-contrast !important;
-                backface-visibility: hidden;
-                transform: translateZ(0);
+        /* Responsive Typography */
+        @media (max-width: 480px) {
+            .carousel-caption h2 {
+                font-size: 18px !important;
+                line-height: 1.2 !important;
+                margin-bottom: 8px !important;
+            }
+            .carousel-caption p {
+                font-size: 12px !important;
+                line-height: 1.3 !important;
             }
         }
 
-        @media (max-width: 768px) {
-            .carousel-caption {
-                bottom: 50px !important;
-                left: 50% !important;
-                transform: translateX(-50%) !important;
-                text-align: center !important;
-                width: 90% !important;
-            }
+        @media (min-width: 481px) and (max-width: 768px) {
             .carousel-caption h2 {
                 font-size: 24px !important;
                 line-height: 1.2 !important;
@@ -143,9 +144,29 @@
                 font-size: 14px !important;
                 line-height: 1.3 !important;
             }
-            .item > div {
-                height: 300px !important;
-                background-attachment: scroll !important;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .carousel-caption h2 {
+                font-size: 36px !important;
+                line-height: 1.2 !important;
+                margin-bottom: 12px !important;
+            }
+            .carousel-caption p {
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .carousel-caption h2 {
+                font-size: 48px !important;
+                line-height: 1.2 !important;
+                margin-bottom: 15px !important;
+            }
+            .carousel-caption p {
+                font-size: 20px !important;
+                line-height: 1.4 !important;
             }
         }
         </style>
@@ -153,7 +174,86 @@
     <!-- End #carousel-section -->
 
     <script>
+    // Dynamic Responsive Carousel Sizing Function
+    function calculateCarouselHeight() {
+        var screenWidth = $(window).width();
+        var screenHeight = $(window).height();
+        var carouselHeight;
+        var servicesMargin;
+        var captionBottom;
+        
+        // Calculate optimal height based on screen resolution and device type
+        if (screenWidth <= 480) {
+            // Mobile phones
+            carouselHeight = Math.max(300, screenHeight * 0.4);
+            servicesMargin = 50;
+            captionBottom = 30;
+        } else if (screenWidth <= 768) {
+            // Tablets portrait
+            carouselHeight = Math.max(400, screenHeight * 0.5);
+            servicesMargin = 100;
+            captionBottom = 50;
+        } else if (screenWidth <= 1024) {
+            // Tablets landscape / small laptops
+            carouselHeight = Math.max(500, screenHeight * 0.6);
+            servicesMargin = 150;
+            captionBottom = 80;
+        } else if (screenWidth <= 1440) {
+            // Standard desktop
+            carouselHeight = Math.max(600, screenHeight * 0.7);
+            servicesMargin = 200;
+            captionBottom = 120;
+        } else if (screenWidth <= 1920) {
+            // Full HD desktop
+            carouselHeight = Math.max(800, screenHeight * 0.75);
+            servicesMargin = 250;
+            captionBottom = 150;
+        } else {
+            // 4K and ultrawide monitors
+            carouselHeight = Math.max(1000, screenHeight * 0.8);
+            servicesMargin = 300;
+            captionBottom = 180;
+        }
+        
+        // Ensure minimum and maximum bounds
+        carouselHeight = Math.min(carouselHeight, screenHeight * 0.85);
+        carouselHeight = Math.max(carouselHeight, 250);
+        
+        return {
+            height: Math.round(carouselHeight),
+            servicesMargin: servicesMargin,
+            captionBottom: captionBottom
+        };
+    }
+    
+    // Apply dynamic sizing to carousel
+    function resizeCarousel() {
+        var dimensions = calculateCarouselHeight();
+        
+        // Apply heights to all carousel elements
+        $('#carousel-section').css('min-height', dimensions.height + 'px');
+        $('.container-fluid-kamn').css('height', dimensions.height + 'px');
+        $('.container-fluid-kamn .row').css('height', dimensions.height + 'px');
+        $('#hero-carousel').css('height', dimensions.height + 'px');
+        $('.carousel-inner').css('height', dimensions.height + 'px');
+        $('.carousel-slide').css('height', dimensions.height + 'px');
+        
+        // Position carousel caption
+        $('.carousel-caption').css('bottom', dimensions.captionBottom + 'px');
+        
+        // Adjust services section margin
+        $('#services').css('margin-top', dimensions.servicesMargin + 'px');
+        
+        // Update indicators position
+        $('.carousel-indicators').css('bottom', Math.max(20, dimensions.captionBottom - 100) + 'px');
+        
+        console.log('Carousel resized to:', dimensions.height + 'px', 'for screen:', $(window).width() + 'x' + $(window).height());
+    }
+    
     $(document).ready(function() {
+        // Initial carousel sizing
+        resizeCarousel();
+        
         // Force carousel initialization
         $('#hero-carousel').carousel({
             interval: 5000,
@@ -168,8 +268,23 @@
         // Start carousel
         $('#hero-carousel').carousel('cycle');
         
-        // Debug log
-        console.log('Carousel initialized');
+        // Resize on window resize with debouncing
+        var resizeTimeout;
+        $(window).resize(function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                resizeCarousel();
+            }, 250);
+        });
+        
+        // Resize on orientation change (mobile devices)
+        $(window).on('orientationchange', function() {
+            setTimeout(function() {
+                resizeCarousel();
+            }, 500);
+        });
+        
+        console.log('Dynamic responsive carousel initialized');
     });
     </script>
 
