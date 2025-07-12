@@ -272,8 +272,8 @@
             servicesHeaderBody = 14;
             servicesTitle = 18;
             servicesBody = 13;
-            servicesIconSize = 'fa-3x';
-            servicesPadding = 40; // Increased from 30
+            servicesIconSize = 'fa-4x'; // Increased from fa-3x
+            servicesPadding = 40;
         } else if (screenWidth <= 768) {
             // Tablets portrait
             carouselHeight = Math.max(400, screenHeight * 0.5);
@@ -283,8 +283,8 @@
             servicesHeaderBody = 16;
             servicesTitle = 20;
             servicesBody = 14;
-            servicesIconSize = 'fa-4x';
-            servicesPadding = 50; // Increased from 40
+            servicesIconSize = 'fa-5x'; // Increased from fa-4x
+            servicesPadding = 50;
         } else if (screenWidth <= 1024) {
             // Tablets landscape / small laptops
             carouselHeight = Math.max(500, screenHeight * 0.6);
@@ -294,8 +294,8 @@
             servicesHeaderBody = 17;
             servicesTitle = 22;
             servicesBody = 15;
-            servicesIconSize = 'fa-4x';
-            servicesPadding = 60; // Increased from 45
+            servicesIconSize = 'fa-6x'; // Increased from fa-4x
+            servicesPadding = 60;
         } else if (screenWidth <= 1440) {
             // Standard desktop
             carouselHeight = Math.max(600, screenHeight * 0.7);
@@ -305,8 +305,8 @@
             servicesHeaderBody = 18;
             servicesTitle = 24;
             servicesBody = 16;
-            servicesIconSize = 'fa-5x';
-            servicesPadding = 70; // Increased from 50
+            servicesIconSize = 'fa-7x'; // Increased from fa-5x
+            servicesPadding = 70;
         } else if (screenWidth <= 1920) {
             // Full HD desktop
             carouselHeight = Math.max(800, screenHeight * 0.75);
@@ -316,8 +316,8 @@
             servicesHeaderBody = 20;
             servicesTitle = 26;
             servicesBody = 17;
-            servicesIconSize = 'fa-5x';
-            servicesPadding = 80; // Increased from 55
+            servicesIconSize = 'fa-8x'; // Increased from fa-5x
+            servicesPadding = 80;
         } else {
             // 4K and ultrawide monitors
             carouselHeight = Math.max(1000, screenHeight * 0.8);
@@ -327,8 +327,8 @@
             servicesHeaderBody = 24;
             servicesTitle = 30;
             servicesBody = 20;
-            servicesIconSize = 'fa-6x';
-            servicesPadding = 100; // Increased from 60
+            servicesIconSize = 'fa-9x'; // Increased from fa-6x
+            servicesPadding = 100;
         }
         
         // Ensure minimum and maximum bounds
@@ -378,7 +378,7 @@
         $('.services-section').css('padding-bottom', dimensions.servicesPadding + 'px');
         
         // Update icon sizes dynamically
-        $('.services-icon span, .services-icon i').removeClass('fa-3x fa-4x fa-5x fa-6x').addClass(dimensions.servicesIconSize);
+        $('.services-icon span, .services-icon i').removeClass('fa-3x fa-4x fa-5x fa-6x fa-7x fa-8x fa-9x').addClass(dimensions.servicesIconSize);
         
         console.log('Carousel and Services resized - Carousel:', dimensions.height + 'px', 'Services Header:', dimensions.servicesHeaderTitle + 'px', 'for screen:', $(window).width() + 'x' + $(window).height());
     }
